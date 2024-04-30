@@ -67,12 +67,12 @@ document.write("</br>")
 //Te gusta el chocolate (verdadero o falso)
 //Tienes mascota (verdadero o falso)
 
-document.write("EJEMPLO 1</br>")
+document.write("EJERCICIO 1</br>")
 let Nombre;
 let Apellidos;
-let Edad
-let Altura
-let Ciudad
+let Edad;
+let Altura;
+let Ciudad;
 let gustaPlaya;
 let gustaMontaña;
 let gustaChocolate
@@ -94,10 +94,10 @@ document.write("Apellidos:" + Apellidos + "</br>");
 document.write("Edad:" + Edad + "</br>");
 document.write("Altura:" + Altura + "</br>");
 document.write("Ciudad:" + Ciudad + "</br>");
-document.write("¿Le gusta la playa?</br>" + (gustaPlaya ? true : false) + "</br>");
-document.write("¿Le gusta la montaña?</br>" + (gustaMontaña ? true : false) + "</br>");
-document.write("¿Le gusta el chocolate?</br>" + (gustaChocolate ? true : false) + "</br>");
-document.write("¿Tienes mascota?</br>" + (tieneMascota ? true : false) + "</br>");
+document.write("¿Le gusta la playa?</br>" + gustaPlaya + "</br>");
+document.write("¿Le gusta la montaña?</br>" + gustaMontaña + "</br>");
+document.write("¿Le gusta el chocolate?</br>" + gustaChocolate + "</br>");
+document.write("¿Tienes mascota?</br>" + tieneMascota + "</br>");
 document.write("</br>")
 
 document.write("INFORMACION DE UN CONOCIDO</br>")
@@ -117,10 +117,10 @@ document.write("Apellidos:" + Apellidos + "</br>");
 document.write("Edad:" + Edad + "</br>");
 document.write("Altura:" + Altura + "</br>");
 document.write("Ciudad:" + Ciudad + "</br>");
-document.write("¿Le gusta la playa?</br>" + (gustaPlaya ? true : false) + "</br>");
-document.write("¿Le gusta la montaña?</br>" + (gustaMontaña ? true : false) + "</br>");
-document.write("¿Le gusta el chocolate?</br>" + (gustaChocolate ? true : false) + "</br>");
-document.write("¿Tienes mascota?</br>" + (tieneMascota ? true : false) + "</br>");
+document.write("¿Le gusta la playa?</br>" + gustaPlaya + "</br>");
+document.write("¿Le gusta la montaña?</br>" + gustaMontaña + "</br>");
+document.write("¿Le gusta el chocolate?</br>" + gustaChocolate + "</br>");
+document.write("¿Tienes mascota?</br>" + tieneMascota + "</br>");
 document.write("</br>")
 
 //Ejercicio 2: Declara variables para guardar la siguiente información sobre una película, asígnale los valores de tu película favorita y muéstrala en tu página. A continuación cambia el valor de título y género de la película a inglés y muestralo en tu página.
@@ -132,7 +132,7 @@ document.write("</br>")
 //Duración en minutos
 //¿Tiene premios? (verdadero o falso)
 
-document.write("EJEMPLO 2</br>")
+document.write("EJERCICIO 2</br>")
 let tituloPelicula;
 let director;
 let añoLanzamiento;
@@ -140,6 +140,24 @@ let generoPelicula;
 let duración;
 let tienePremios;
 
+tituloPelicula = "El Señor de los anillos";
+director = "Peter Jackson";
+añoLanzamiento = 2001;
+generoPelicula = "Fantasia epica";
+duracion = 178;
+tienePremios = true;
+
+document.write("Información de la pelicula:</br>");
+document.write("titulo: " + tituloPelicula + "</br>");
+document.write("director:" + director + "</br>");
+document.write("año:" + añoLanzamiento + "</br>");
+document.write("genero:" + generoPelicula + "</br>");
+document.write("duracion:" + duracion + "</br>");
+document.write("¿tiene premios?</br>" + tienePremios + "</br>");
+document.write("</br>")
+
+
+document.write("PELICULA CON TITULO EN INGLES</br>")
 tituloPelicula = "The Lord of the Rings: The Fellowship of the Ring";
 director = "Peter Jackson";
 añoLanzamiento = 2001;
@@ -153,7 +171,7 @@ document.write("director:" + director + "</br>");
 document.write("año:" + añoLanzamiento + "</br>");
 document.write("genero:" + generoPelicula + "</br>");
 document.write("duracion:" + duracion + "</br>");
-document.write("¿tiene premios?</br>" + (tienePremios ? true : false) + "</br>");
+document.write("¿tiene premios?</br>" + tienePremios + "</br>");
 document.write("</br>")
 
 
@@ -166,7 +184,7 @@ document.write("</br>")
 //Duración
 //¿Tiene videoclip? (verdadero o falso)
 
-document.write("EJEMPLO 3</br>")
+document.write("EJERCICIO 3</br>")
 let tituloCancion;
 let Artista;
 let Album;
@@ -187,7 +205,7 @@ document.write("Artista:" + Artista + "</br>");
 document.write("Album:" + Album + "</br>");
 document.write("año:" + añoCancion + "</br>");
 document.write("Duracion:" + Duracion + "</br>");
-document.write("¿tiene videoclip?</br>" + (tieneVideoclip ? true : false) + "</br>");
+document.write("¿tiene videoclip?</br>" + tieneVideoclip + "</br>");
 document.write("</br>")
 
 //Ejercicio 4: Declara variables para guardar la siguiente información sobre un libro. Asigna los valores de tu libro favorito y muéstrala en tu página. A continuación cambia los valores de las variables por el del libro favorito de alguien que conozcas.
@@ -199,7 +217,7 @@ document.write("</br>")
 //Número de páginas
 //¿Tiene película? (verdadero o falso)
 
-document.write("EJEMPLO 4</br>")
+document.write("EJERCICIO 4</br>")
 let tituloLibro;
 let autor;
 let genero;
@@ -220,7 +238,7 @@ document.write("Autor: " + autor + "</br>");
 document.write("Genero literario: " + genero + "</br>");
 document.write("Año de publicación: " + añoPublicacion + "</br>");
 document.write("Numero de paginas: " + numeroPaginas + "</br>");
-document.write("¿Tiene pelicula?: " + (tienePelicula ? true : false) + "</br>");
+document.write("¿Tiene pelicula?: " + tienePelicula + "</br>");
 document.write("</br>")
 
 
@@ -239,7 +257,7 @@ document.write("</br>")
 //¿Es un deporte de equipo? (verdadero o falso)
 //¿Se practica en exteriores? (verdadero o falso)
 
-document.write("EJEMPLO 5</br>")
+document.write("EJERCICIO 5</br>")
 let nombreDeporte;
 let lugarOrigen;
 let popularidad;
@@ -261,8 +279,8 @@ document.write("Nombre del deporte: " + nombreDeporte + "</br>");
 document.write("Lugar de origen: " + lugarOrigen + "</br>");
 document.write("Popularidad: " + popularidad + " / 10</br>");
 document.write("Equipamiento necesario: " + equipamiento + "</br>");
-document.write("¿Es un deporte de equipo?: " + (esDeporteEquipo ? "Sí" : "No") + "</br>");
-document.write("¿Se practica en exteriores?: " + (sePracticaExteriores ? true : false) + "</br></br>");
+document.write("¿Es un deporte de equipo?: " + esDeporteEquipo + "</br>");
+document.write("¿Se practica en exteriores?: " + sePracticaExteriores + "</br></br>");
 
 document.write("CAMBIO DE DEPORTE</br>")
 nombreDeporte = "Natacion";
@@ -277,8 +295,8 @@ document.write("Nombre del deporte: " + nombreDeporte + "</br>");
 document.write("Lugar de origen: " + lugarOrigen + "</br>");
 document.write("Popularidad: " + popularidad + " / 10</br>");
 document.write("Equipamiento necesario: " + equipamiento + "</br>");
-document.write("¿Es un deporte de equipo?: " + (esDeporteEquipo ? true : false) + "</br>");
-document.write("¿Se practica en exteriores?: " + (sePracticaExteriores ? true : false) + "</br>");
+document.write("¿Es un deporte de equipo?: " + esDeporteEquipo + "</br>");
+document.write("¿Se practica en exteriores?: " + sePracticaExteriores + "</br>");
 document.write("</br>")
 
 
@@ -293,7 +311,7 @@ document.write("</br>")
 //¿Es un destino urbano? (verdadero o falso)
 
 
-document.write("EJEMPLO 6</br>")
+document.write("EJERCICIO 6</br>")
 let nombreDestino;
 let pais;
 let clima;
@@ -319,8 +337,8 @@ document.write("Pais: " + pais + "</br>");
 document.write("Clima predominante: " + clima + "</br>");
 document.write("Poblacion:" + poblacion + "</br>");
 document.write("Principales atracciones turisticas: " + atracciones.join(", ") + "</br>");    
-document.write("¿Es un destino costero?: " + (esCostero ? true : false) + "</br>");
-document.write("¿Es un destino urbano?: " + (esUrbano ? "Sí" : "No") + "</br></br>");
+document.write("¿Es un destino costero?: " + esCostero + "</br>");
+document.write("¿Es un destino urbano?: " + esUrbano  + "</br></br>");
 
 document.write("CAMBIO DE DESTINO</br>")    
 nombreDestino = "Malaga";
@@ -338,7 +356,7 @@ document.write("Pais: " + pais + "</br>");
 document.write("Clima predominante: " + clima + "</br>");
 document.write("Poblacion: " + poblacion + "</br>");
 document.write("Principales atracciones turisticas: " + atracciones.join(", ") + "</br>");    document.write("¿Es un destino costero?: " + (esCostero ? true : false) + "</br>");
-document.write("¿Es un destino urbano?: " + (esUrbano ? true : false) + "</br>");
+document.write("¿Es un destino urbano?: " + esUrbano + "</br>");
 
 
 
