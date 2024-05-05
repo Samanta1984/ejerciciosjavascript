@@ -49,11 +49,11 @@ let notaExamen1 = 5.6;
 let notaExamen2 = 8.2;
 let notaExamen3 = 6.5;
 let totalExamenes = 3;
-let notaMedia;
+let notaMedia2;
 
-notaMedia = (notaExamen1 + notaExamen2 + notaExamen3)/totalExamenes;
+notaMedia2 = (notaExamen1 + notaExamen2 + notaExamen3)/totalExamenes;
 document.write("Combinar varias operaciones: La media de los examenes " + notaExamen1 + " " + notaExamen2 + " " + notaExamen3 );
-document.write(" seria en total: " + notaMedia);
+document.write(" seria en total: " + notaMedia2);
 document.write("<br/>");
 
 //OPERADORES INCREMENTO Y DECREMENTO

@@ -1,153 +1,234 @@
-//HACER EJERCICIOS DEL TEMA 3. OPERACIONES
-//CONSTANTES
 
-//Declara las siguientes variables o constantes según corresponda:
-//Número de meses del año.
-//Número de días de la semana.
-//Número de habitantes en tu ciudad.
-//Edad de tu cantante favorito.
-//Número de estaciones del año.
-//Nombre de tu ciudad.
-//Número de horas en un día.
-//Precio de la gasolina.
-//Número de libros que has leído.
+document.write("FRUTAS Y PRECIOS")
+let manzana = 2.5;
+let pera = 1.5;
+let platano = 1.8;
+document.write("</br>")
+
+document.write("Mostrar el precio total de 1 kilo de manzana y 1 kilo de pera")
+let totalManzanaPera = manzana + pera;
+document.write("</br>")
 
 
-const MESES_DEL_ANO = 12;
-const DIAS_DE_LA_SEMANA = 7;
-let habitantes_en_mi_ciudad = 1000000; 
-let edad_de_mi_cantante_favorito = 35; 
-const ESTACIONES_DEL_ANO = 4;
-let nombre_de_mi_ciudad = "Malaga"; 
-const HORAS_EN_UN_DI = 24;
-let precio_de_la_gasolina = 1.49; 
-let libros_leidos = 50; 
-
-document.write("<pre>");
-document.write("CONSTANTES\n\n");
-
-document.write("Meses del ano = 12\n");
-document.write("Dias de la semana = 7\n");
-document.write("Habitantes en mi ciudad = 1000000\n");
-document.write("Edad de mi cantante favorito = 35\n");
-document.write("Estaciones del ano = 4\n");
-document.write("Nombre de mi ciudad = Malaga\n");
-document.write("Horas en un dia = 24\n");
-document.write("Precio de la gasolina = 1.49\n");
-document.write("Libros leidos = 50\n");
-
-document.write("</pre>");
+document.write("Precio total = " +  totalManzanaPera)
+document.write("</br>")
 
 
+document.write("Mostrar el precio total de 1 kilo de platano y 1 kilo de pera")
+let totalPlatanoPera = platano + pera;
+document.write("</br>")
 
 
-//3. OPERACIONES
+document.write("Precio total = " +  totalPlatanoPera)
+document.write("</br>")
 
-//Haz los siguientes ejercicios en el fichero javascript e3-ejercicios-guardar-informacion.js y muestralos en la pagina e3-guardar-informacion.html junto con los ejemplos vistos en clase.
 
-//Crea variables para guardar el nombre de los siguientes productos junto con sus precios por kilo y muestralos en tu pagina. 
+document.write("Mostrar el precio total 2 kilo de pera")
+let totalPera = pera * 2;
+document.write("</br>")
 
-//Manzana: 2,5
-let Manzana = 2.5;
 
-//Pera: 1,5
-let Pera = 1.5;
+document.write("Precio total = " +  totalPera)
+document.write("</br>")
 
-//Platano: 1,8
-let Platano = 1.8;
-//let precioTotal;
+document.write("Mostrar el precio total 3 kilos de platanos")
+let totalPlatano = platano * 3;
+document.write("</br>")
 
-//A continuación muestra por pantalla el precio total de:
 
-//1 kilo de manzana y 1 kilo de pera
-const precioManzana = 2.5;
-const precioPera = 1.5;
+document.write("Precio total = " +  totalPlatano)
+document.write("</br>")
 
-let kiloManzana = 1;
-let kiloPera = 1;
-let precioTotal = (kiloManzana * precioManzana) + (kiloPera * precioPera);
 
-        
-document.write("El precio total de 1 kilo de pera y 1 kilo de manzana es: €" + precioTotal.toFixed(2));
+document.write("Mostrar precio de 2 kilos de manzana y 3 kilos de peras")
 
-//1 kilo de platano y 1 kilo de pera
+let kilosManzana = 2; 
+let kilosPera = 3; 
 
-//2 kilos de peras
+let totalManzana = manzana * kilosManzana;
+let totalPera1 = pera * kilosPera;
+let totalManzanaPera1 = totalManzana + totalPera;
 
-//3 kilos de platanos
+document.write("Precio total de manzana" + totalManzana);
+document.write("<br>");
+document.write("Precio total de pera" + totalPera1);
+document.write("<br>");
+document.write("Precio total" +  totalManzanaPera1);
+document.write("<br>");
 
-//2 kilos de manzana y 3 kilos de peras
 
-//1,5 kilos de platano, 2 kilos de peras, 3 kilos de manzana
 
-//2,5 kilos de peras, 3,5 kilos de platano
+document.write("1,5 kilos de platano, 2 kilos de peras, 3 kilos de manzana")
+let kilosPlatano = 1.5;
+let kilosManzana1 = 3; 
+let kilosPera1 = 2; 
 
-//Crea variables para guardar las notas de un alumno: 7.5, 10.5, 8, 9.5, 7 y muestra su nota media.
+let totalPlatano1 = platano * kilosPlatano;
+let totalManzana1 = manzana * kilosManzana1;
+let totalPera2 = pera * kilosPera1;
+let totalManzanaPeraPlatano = totalManzana1 + totalPera2 + totalPlatano1;
 
-//Calcula el área de un cuadrado con lado de longitud 5 cm.
+document.write("1.5 kilos de plátano, 2 kilos de peras, 3 kilos de manzana");
+document.write("<br>");
+document.write("Precio total de plátano =" + totalPlatano1);
+document.write("<br>");
+document.write("Precio total de manzana =" + totalManzana1);
+document.write("<br>");
+document.write("Precio total de pera =" + totalPera2);
+document.write("<br>");
+document.write("Precio total =" + totalManzanaPeraPlatano);
+document.write("<br>");
+
+
+document.write("Mostrar precio de 2,5 kilos de peras, 3,5 kilos de platano")
+
+let kilosPlatano1 = 3.5; 
+let kilosPera2 = 2.5; 
+document.write("<br>");
+
+let totalPlatano2 = platano * kilosPlatano1;
+let totalPera3 = pera * kilosPera2;
+let totalPlatanoPera1 = totalPlatano2 + totalPera3;
+
+document.write("Precio total de platano =" + totalPlatano1);
+document.write("<br>");
+document.write("Precio total de pera =" + totalPera3);
+document.write("<br>");
+document.write("Precio total =" +  totalPlatanoPera1);
+document.write("<br>");
+
+
+
+//document.write("Variables para las notas")
+let nota1 = 7.5;
+let nota2 = 10.5;
+let nota3 = 8;
+let nota4 = 9.5;
+let nota5 = 7;
+document.write("<br>");
+
+
+let notaMedia = (nota1 + nota2 + nota3 + nota4 + nota5) / 5;
+
+document.write("Mostrar la nota media")
+document.write("Las notas del alumno son" + nota1 + ", " + nota2 + ", " + nota3 + ", " + nota4 + ", " + nota5);
+document.write("<br>");
+document.write("La nota media del alumno es: " + notaMedia);
+document.write("<br>");//
+
+
+//document.write("Calcula el area de un cuadrado con lado de longitud 5 cm.")
+let lado = 5; 
+let area = lado * lado;
+document.write("<br>");
+
+
+document.write("El area del cuadrado con lado de longitud 5 cm es: " + area + " cm²");
+document.write("<br>");
 
 //Encuentra el área de un rectángulo con dimensiones de 8 cm de largo y 6 cm de ancho.
+document.write("Encuentra el area del rectangulo")
+let longitud = 8; 
+let ancho = 6; 
+let area1 = longitud * ancho;
+document.write("</br>")
+
+document.write("Area de un rectangulo");
+document.write("Longitud del rectangulo: " + longitud + " cm</br>");
+document.write("Ancho del rectangulo: " + ancho + " cm</br>");
+document.write("Area del rectangulo: " + area1 + " cm<sup>2</sup></br>");
+document.write("</br>")
 
 //Determina el área de un triángulo con base de 10 metros y altura de 8 metros.
 
+document.write("Definimos la base y la altura del triangulo")
+let base = 10; 
+let altura = 8;
+let area2 = (base * altura) / 2;
+document.write("</br>")
+
+document.write("Area de un triangulo");
+document.write("<p>Base del triangulo: " + base + " metros</br>");
+document.write("<p>Altura del triangulo: " + altura + " metros</br>");
+document.write("<p>Area del triangulo: " + area2 + " metros cuadrados</br>")
+document.write("</br>")
+
 //Calcula el área de un círculo con radio de 4 centímetros
+document.write("Area de un circulo con radio")
+let pi = Math.PI;
+let radio = 4; 
+let area3 = pi * Math.pow(radio, 2);
+document.write("</br>")
+
+document.write("Area de un circulo");
+document.write("Radio del circulo: " + radio + " cm</br>");
+document.write("Area del circulo: " + area3.toFixed(2) + " cm</br>");
+document.write("</br>")
 
 //Encuentra el área de un trapecio con bases de longitudes 6 cm y 10 cm, y altura de 8 cm.
 
-//Determina el área de un rombo con diagonales de longitudes 12 cm y 16 cm.
+document.write("Area del trapecio con bases")
+let baseMayor = 10; 
+let baseMenor = 6; 
+let altura1 = 8; 
+let area4 = ((baseMayor + baseMenor) / 2) * altura;
+document.write("</br>")
+
+document.write("Resultados")
+document.write("Area de un trapecio");
+document.write("Base mayor: " + baseMayor + " cm</br>");
+document.write("Base menor: " + baseMenor + " cm</br>");
+document.write("Altura: " + altura1 + " cm</br>");
+document.write("Area del trapecio: " + area4+ " cm</br>");
+document.write("</br>")
+
+//Determina el área de un rombo con diagonales de longitudes 12 cm y 16 cm
+
+document.write("Definimos las diagonales del rombo")
+let diagonalMayor = 16; 
+let diagonalMenor = 12; 
+let area5 = (diagonalMayor * diagonalMenor) / 2;
+document.write("</br>")
+
+
+document.write("Area de un rombo");
+document.write("Diagonal mayor: " + diagonalMayor + " cm</br>");
+document.write("Diagonal menor: " + diagonalMenor + " cm</br>");
+document.write("Area del rombo: " + area5 + " cm</br>");
+document.write("</br>")
 
 //Calcula el área de un paralelogramo con base de 7 metros y altura de 9 metros.
 
+document.write("Definimos la base y la altura del paralelogramo")
+let base1 = 7; 
+let altura2 = 9; 
+let area6 = base * altura;
+document.write("</br>")
+
+document.write("Resultados")
+document.write("Area de un paralelogramo");
+document.write("Base: " + base1 + " m</br>");
+document.write("Altura: " + altura2 + " m</br>");
+document.write("Area del paralelogramo: " + area6 + " m</br>")
+document.write("</br>")
+
 //Encuentra el área de un pentágono regular con lado de 6 centímetros.
 
+document.write("Definimos la longitud de un lado del pentagono")
+let lado2 = 6;
+let numeroLados = 5;
 
-///4. CADENAS (TEXTOS)
-
-//Haz los siguientes ejercicios en el fichero javascript e4-cadenas.js y muestralos en la pagina e4-cadenas.html junto con los ejemplos vistos en clase. No uses document.write para mostrar la solución. En su lugar, agrega por cada ejercicio a tu html un título por cada ejercicio y un parrafo o lista con ids para mostrar cada solución en su lugar.
-
-
-//Crea una variable con la frase Hola que tal, bienvenida a QA, y muestrala junto con:
-
-//Su longitud
-
-//La posición de la palabra QA
-
-//La primera letra de la frase.
-
-//La última letra de la frase.
-
-//Muestra la frase completa en mayúscula
-
-//Muestra la frase completa en minúscula
-
-//Crea una variable con tu nombre, y modifica la frase para que diga Hola seguido de tu nombre
-
-//Crea una nueva palabra, con la misma frase quitando la palabra que tal.
-
-//Crea una variable con una frase en la que te presentes y muestrala junto con:
-
-//Su longitud
-
-//La posición de tu nombre
-
-//La primera letra de la frase.
-
-//La última letra de la frase.
-
-//Muestra la frase completa en mayúscula
-
-//Muestra la frase completa en minúscula
-
-//Muestra la frase cambiando tu nombre por otro que elijas.
-
-//Crea una nueva palabra, con la misma frase quitando tu nombre.
-
-//Crea una variable con tu nombre completo y muestralo por pantalla. A continuación, quita los espacios de la variable y muestralo por pantalla.
-
-//Crea una variable con una palabra en minuscula y muestralo por pantalla. Cambia la primera letra a mayuscula y muestrala por pantalla.
-
-//Crea una cadena con el texto Hola Mundo y muestralo por pantalla. Reemplaza la palabra Hola por Adios y muestralo por pantalla.
+let apotema = 4.0451;
+//1. calcula el perimetro, que es la suma de todos sus lados. Todos sus lados miden lo mismo.
+let perimetro = lado2 * numeroLados;
 
 
 
+//area perimetro por apotema entre dos
+let area7 = perimetro * apotema/ 2;
 
+document.write("</br>")
+document.write("Area de un pentágono regular");
+document.write("Lado: " + lado2 + " cm</br>");
+document.write("Area del pentágono regular: " + area7 + " cm</br>");
+document.write("</br>")

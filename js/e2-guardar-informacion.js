@@ -359,4 +359,43 @@ document.write("Principales atracciones turisticas: " + atracciones.join(", ") +
 document.write("¿Es un destino urbano?: " + esUrbano + "</br>");
 
 
+//CONSTANTES
+
+//Declara las siguientes variables o constantes según corresponda:
+//Número de meses del año.
+//Número de días de la semana.
+//Número de habitantes en tu ciudad.
+//Edad de tu cantante favorito.
+//Número de estaciones del año.
+//Nombre de tu ciudad.
+//Número de horas en un día.
+//Precio de la gasolina.
+//Número de libros que has leído.
+
+document.write("CONSTANTES </br>");
+const MESESDELAÑO = 12;
+const DIASSEMANA = 7;
+let habitantes_en_mi_ciudad = 1000000; 
+let edad_de_mi_cantante_favorito = 35; 
+const ESTACIONESDELAÑO = 4;
+let nombre_de_mi_ciudad = "Malaga"; 
+const HORASENUNDIA = 24;
+let precio_de_la_gasolina = 1.49; 
+let libros_leidos = 50; 
+
+document.write("<br/>");
+document.write("CONSTANTES </br>");
+
+document.write("Meses del ano " + MESESDELAÑO + "</br>");
+document.write("Dias de la semana " + DIASSEMANA + "</br>");
+document.write("Habitantes en mi ciudad " + habitantes_en_mi_ciudad + "</br>");
+document.write("Edad de mi cantante favorito" + edad_de_mi_cantante_favorito + "</br>");
+document.write("Estaciones del ano" + ESTACIONESDELAÑO + "</br>");
+document.write("Nombre de mi ciudad " + nombre_de_mi_ciudad + "</br>");
+document.write("Horas en un dia " + HORASENUNDIA + "</br>");
+document.write("Precio de la gasolina " + precio_de_la_gasolina + "</br>");
+document.write("Libros leidos " + libros_leidos + "</br>");
+
+document.write("<br/>");
+
 
