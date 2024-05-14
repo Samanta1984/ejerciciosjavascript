@@ -191,48 +191,38 @@ examp6.innerText = fraseCambiada1;
 
 
 //Crea una nueva palabra, con la misma frase quitando tu nombre.ESTA MAL
-let FraseSinNombre = "Hola que tal, me llamo  ";
+let FraseSinNombre = " Hola que tal, me llamo Sara ";
 
-let nombreEstudiante3 = "Samanta";
+let nombreEstudiante3 = " Samanta ";
 
 let nuevaFraseSinNombre = FraseSinNombre.replace(nombreEstudiante3, "");
-
-console.log("Frase sin nombre:", nuevaFraseSinNombre);
 
 nuevaFraseSinNombre = FraseSinNombre.replace(/nombreEstudiante3/g, "");
 
 let examp7 = document.getElementById("examp7");
-examp7.innerText = FraseSinNombre;
+examp7.innerText = " Frase sin nombre " + nuevaFraseSinNombre;
 
 
 //3.EJERCICIO
 //Crea una variable con tu nombre completo y muestralo por pantalla. A continuación, quita los espacios de la variable y muestralo por pantalla.
 // Crea una variable con tu nombre completo
-let nombreCompleto = "Samanta Ramos Podadera";
-
-console.log("Nombre completo:", nombreCompleto);
-
-let nombreSinEspacios = nombreCompleto.replace(/\s/g, "");
-
-console.log("Nombre sin espacios:", nombreSinEspacios);
+let nombreConEspacios = "Samanta Ramos Podadera";
+let quitarEspacios = nombreConEspacios.replace(/\s/g, "");
 
 let ejercicio3 = document.getElementById("ejercicio3");
-ejercicio3.innerText = nombreSinEspacios;
+ejercicio3.innerText =  "Mi nombre sin espacios es: " + quitarEspacios + " y con espacios " + nombreConEspacios;
+
 
 //4.EJERCICIO
 //Crea una variable con una palabra en minuscula y muestralo por pantalla. Cambia la primera letra a mayuscula y muestrala por pantalla.
 let palabraMinuscula = "alcazaba";
-let palabraMayuscula3 = "Alcazaba"
-console.log("Palabra en minuscula:", palabraMinuscula);
 
 let primeraLetraMayuscula = palabraMinuscula.charAt(0).toUpperCase();
 let restoPalabra = palabraMinuscula.slice(1);
 let palabraMayuscula = primeraLetraMayuscula + restoPalabra;
 
-console.log("Palabra con la primera letra en mayuscula:", palabraMayuscula3);
-
 let ejercicio4 = document.getElementById("ejercicio4");
-ejercicio4.innerText = palabraMinuscula + palabraMayuscula;
+ejercicio4.innerText = " Palabra con la primera letra en minuscula: " + palabraMinuscula + " y en mayuscula " + palabraMayuscula;
 
 //5.EJERCICIO
 //Crea una cadena con el texto Hola Mundo y muestralo por pantalla. Reemplaza la palabra Hola por Adios y muestralo por pantalla.
@@ -241,9 +231,7 @@ let texto = "Hola Mundo";
 
 let textoModificado = texto.replace("Hola", "Adios");
 
-console.log(textoModificado);
-
 textoModificado = texto.replace(/Hola/g, "Adios");
 
 let ejercicio5 = document.getElementById("ejercicio5");
-ejercicio5.innerText = texto + textoModificado;
+ejercicio5.innerText = " Saludo inicial " + texto + " Saludo final " + textoModificado;

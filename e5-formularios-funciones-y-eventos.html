@@ -25,7 +25,8 @@
     <br>
     <div id="contenidoEjemplosFormularios" class="container mt-5">
         <h2>EJEMPLOS FORMULARIOS</h2>
-        <p>Podeis elegir type EL TIPO, id y PLACEHOLDER: texto de informacion que aparece dentro del recuadro del input</p>
+        <p>Podeis elegir type EL TIPO, id y PLACEHOLDER: texto de informacion que aparece dentro del recuadro del input
+        </p>
         <h3>EJEMPLO 1: Input Tipo Texto</h3>
         <input type="text" id="e1texto" placeholder="Introduce tu texto">
         <h3>EJEMPLO 2: Input Tipo Password</h3>
@@ -119,22 +120,84 @@
                 <option value="Barcelona">Ciudad Barcelona</option>
                 <option value=""></option>
             </select>
-        <button type="button" class="btn btn-success" onclick="mostrarUbicacion()">Mostrar ubicacion</button>
-        <p id="e4solucion"></p>
+            <button type="button" class="btn btn-success" onclick="mostrarUbicacion()">Mostrar ubicacion</button>
+            <p id="e4solucion"></p>
 
     </div>
 
     <div id="contenidoEjercicios" class="container mt-5">
 
         <h2>EJERCICIOS</h2>
+        <h2>EJERCICIOS 1: Crea un formulario para introcir nombre, ciudad y fecha de nacimiento</h2>
 
+        <div id="ejercio1Formulario" class="was-validated">
+            <div class="mb-3">
+                <input type="text" id="ej1Nombre" placeholder="Introduce tu nombre" required minlength="1"
+                    maxlength="40" class="form-control">
+                <p class="valid-feedback">Correcto</p>
+                <p class="invalid-feedback">El nombre es obligatorio y debe tener entre 1 y 20 caracteres</p>
 
+            </div>
+            <div class="mb-3">
+                <input type="text" id="ej1Ciudad" placeholder="Introduce tu ciudad" required minlength="1"
+                    maxlength="40" class="form-control">
+                <p class="valid-feedback">Correcto</p>
+                <p class="invalid-feedback">El nombre de la ciudad es obligatorio y debe tener entre 1 y 20 caracteres
+                </p>
+            </div>
+            <div class="mb-3">
+                <input type="number" id="ej1Fecha" placeholder="Introduce la fecha" required min="1900" max="2024"
+                    class="form-control">
+                <p class="valid-feedback">La fecha es correcta</p>
+                <p class="invalid-feedback">El campo es obligatorio. El año debe estar entre 1900 y 2024</p>
+            </div>
 
+            <button type="button" class="btn btn-success" onclick="wellcome()">Enter</button>
+        </div>
+        <p id="respuesta1"></p>
+        <h2>EJERCICIOS 2 Crea un formulario para sumar, multiplicar, dividir y restar dos numeros<h2>
 
-    </div>
+                <div id="e2formulario" class="was-validated">
 
-    <script src="js/e5-formularios-funciones-y-eventos.js"></script>
-    <script src="js/e5-ejercicios-formularios-funciones-y-eventos.js"></script>
+                    <div class="mb-3">
+                        <input type="text" id="numero1" placeholder="Primer número" required pattern="\d+"
+                            class="form-control">
+                        <p class="valid-feedback">Campo numérico es correcto</p>
+                        <p class="invalid-feedback">El campo número es obligatorio y debe tener dos carácteres
+                            obligatorios</p>
+                    </div>
+
+                    <div class="mb-3">
+                        <input type="text" id="numero2" placeholder="Segundo número" required pattern="\d+"
+                            class="form-control">
+                        <p class="valid-feedback">Campo numérico es correcto</p>
+                        <p class="invalid-feedback">El campo número es obligatorio y debe tener dos carácteres
+                            obligatorios</p>
+                    </div>
+
+                    <p>2. Agrega un boton que al hacer click llame a una función que muestre un mensaje con el resultado
+                        de la
+                        suma, la resta, la multiplicación y la división de esos dos números.
+                    </p>
+                    <button type="button" onclick="calcularOperaciones()" class="btn btn-primary">Calcular</button>
+                </div>
+                <p id="e2resultadOperaciones"></p>
+
+                <h2> EJERCICIO 3:Crea un formulrio para convertir monedas.EL usuario debe introducir una cantidad en
+                    euros<h2>
+                    </h2>
+                    <div class="mb-3">
+                        <input type="number" id="ex3number" required min="0" class="form-control" />
+                        <p class="valid-feedback">El número introducido es correcto</p>
+                        <p class="invalid-feedback">Debe introducir un número positivo</p>
+                    </div>
+                    <button type="button" class="btn btn-info" onclick="convertidorMonedas()">Conversión</button>
+                    </div>
+                    <p id="ex3solucion"></p>
+                    <h2>
+
+                        <script src="js/e5-formularios-funciones-y-eventos.js"></script>
+                        <script src="js/e5-ejercicios-formularios-funciones-y-eventos.js"></script>
 </body>
 
 </html>
