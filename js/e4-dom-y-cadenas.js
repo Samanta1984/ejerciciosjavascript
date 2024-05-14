@@ -99,14 +99,35 @@ let example5 = document.getElementById("example5");
 example5.innerText ="La primera letra de la palabra " + ejemploContar + " es " + primeLetra + " y la ultima letra es " + ultiLetra;
 //La última letra de la frase.
 let frase2 = "Hola que tal, bienvenido a QA";
-let letraUltima = ejemploContar[20];
+let letraUltima = ejemploContar[24];
 let example6 = document.getElementById("example6");
 example6.innerText ="La ultima letra de la palabra " + ejemploContar + " es " + letraUltima;
 
 //Muestra la frase completa en mayúscula
+let frase3 = "Hola que tal, bienvenido a QA";
+let fraseMayuscula = frase3.toUpperCase();
+
+let example7 = document.getElementById("example7");
+example7.innerText = "La frase " + frase3 + " en mayúsculas es: " + fraseMayuscula;
+
 
 //Muestra la frase completa en minúscula
+let frase4 = "Hola que tal, bienvenido a QA";
+let fraseMinusculas = frase4.toLowerCase();
+
+let example8 = document.getElementById("example8");
+example8.innerText = "La frase " + frase4 +" en minúsculas es: " + fraseMinusculas;
+
 
 //Crea una variable con tu nombre, y modifica la frase para que diga Hola seguido de tu nombre
+let nombre = "Samanta";
+let saludo = "Hola " + nombre + ", bienvenido a QA";
 
+let example9 = document.getElementById("example9");
+example9.innerText = saludo;
 //Crea una nueva palabra, con la misma frase quitando la palabra que tal.
+let name = "Samanta";
+let misma = "Hola " + nombre;
+
+let example10= document.getElementById("example10");
+example10.innerText = misma;
