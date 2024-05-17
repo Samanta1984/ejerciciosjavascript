@@ -73,18 +73,17 @@ function tallaColor() {
 }
 
 function ej7Formulario(){
-  let texto = document.getElementById('texto').value;
+  let texto = document.getElementById('ej7texto').value;
   let longitud = texto.length;
-  let palabras = texto.split(' ').filter(palabra => palabra.trim() !== '').length;
-  let caracteres = longitud - palabras + palabras * 2; 
   let mayusculas = texto.toUpperCase();
-  let minusculas = texto.toLowerCase();
+  let primeraLetra = texto.charAt(0);
+  let ultimaLetra = texto.charAt(longitud-1);
 
-  let mensaje = "Primera letra en mayusculas " + mayusculas + " ultima letra en minusculas " + minusculas;
+  let mensaje = "La longitud " + longitud + " el texto en mayusculas es " + mayusculas + " la primera letra es "+ primeraLetra + " la ultima letra es " + ultimaLetra;
   imprimir(mensaje, "ej7Formulario");
 }
 
-function calcularPromedio(){
+//NO ME FUNCIONA function calcularPromedio(){
 let nota = parseInt(document.getElementById("promedio").value);
 const NOTA1 = 0;
 const NOTA2 = 10;
@@ -93,16 +92,15 @@ let promedio = suma + NOTA1 + NOTA2 + NOTA3 / 3;
 let mensaje = "El promedio de la nota es :" + promedio + "total";
 imprimir(mensaje, "resultadoPromedio");
 
-}
+//}
 
-function seleccionar() {
-  let camiseta = document.getElementById("unidad").value; 
-  let zapato = document.getElementById("unidad").value;  
-  let sombrero = document.getElementById("unidad").value; 
-  let cantidadProducto = document.getElementById("cantidadProducto").value;
-  let resultado = cantidadProducto;
+function seleccionar(){
+  let cantidadCamiseta = document.getElementById("camiseta").value; 
+  let cantidadZapato = document.getElementById("zapato").value;  
+  let cantidadSombrero = document.getElementById("sombrero").value; 
+  
 
-  let mensaje = "Has seleccionado los siguientes articulos " + camiseta + zapato + sombrero + " sumando un total de : " + resultado;
+  let mensaje = "Has seleccionado los siguientes articulos " + cantidadCamiseta + cantidadZapato + cantidadSombrero + " sumando un total de : ";
   imprimir(mensaje, "eje9FormulariosResultado");
 }
 

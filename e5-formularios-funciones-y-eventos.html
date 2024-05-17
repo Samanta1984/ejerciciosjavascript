@@ -288,22 +288,22 @@
                             <p id="ex6resultado"></p>
 
                             <h2>Ejercicio 7:Crea un formulario para mostrar información sobre un texto</h2>
-                            <div class="container mt-3">
-                                <h1>Ingresa tu texto</h1>
-                                <form>
-                                    <div class="mb-3">
-                                        <p for="texto" class="form-label">Texto (entre 10 y 100 caracteres)</p>
-                                        <textarea class="form-control is-invalid" id="texto" rows="3" required
-                                            minlength="10" maxlength="100"></textarea>
-                                        <p class="valid-feedback">Texto correcto</p>
-                                        <p class="invalid-feedback">Texto incorrecto </p>
-                                        El texto debe tener entre 10 y 100 caracteres.
-                                    </div>
-                                    <button type="submit" class="btn btn-primary">Enviar</button>
-                            </div>
-                            <div id="ej7Formulario" class="mt-3"></div>
+                        
+                            <form id="ejercio7Formulario" class="was-validated">
+                            
+                                <div class="mb-3">
+                                    <input type="text" id="ej7texto" placeholder="Introduce el texto" required
+                                        minlength="10" maxlength="100" class="form-control">
+                                    <p class="valid-feedback">Correcto</p>
+                                    <p class="invalid-feedback">Texto incorrecto</p>
+                                </div>
+                                <button type="button" class="btn btn-primary" onclick="ej7Formulario()">Pulsar</button>
 
-                        </div>
+                            </form>
+                                
+                            <p id="ej7Formulario"></p>
+
+                        
                         <h2>Ejercicio 8:Crea un formulario para calcular la nota media</h2>
                         <h1>Calculadora de promedio</h1>
                         <form id="formularioPromedio">
