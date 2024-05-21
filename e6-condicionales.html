@@ -101,7 +101,111 @@
         <p id="ej6resultado"></p>
 
     </div>
+
+        <h3>EJERCICIOS</h3>
+
+        <h3>Ejercicio 1: Crea un formulario para que el usuario introduzca su edad 
+        y vea un mensaje indicando si es mayor de edad o no</h3>
+
+        <form id="ej1Condicionales" class="was-validated">
+            <div class="mb-3">
+                <input type="number" id="ej1Numero" placeholder="Introduce un numero" required
+                    class="form-control">
+                <p class="valid-feedback">Correcto</p>
+                <p class="invalid-feedback">Campo vacio</p>
+            </div>
+            <button type="button" class="btn btn-success" onclick="numeroMayor()">Enviar</button>
+        </form>
+        <p id="ej1Mayor"></p>
+
+
+        <h3>Ejercicio 2: Crea un formulario que indique cual es el mayor de dos numeros</h3>
     
+        <form id="ej2Condicionales" class="was-validated">
+            <div class="mb-3">
+                <input type="number" id="ej2Numero" placeholder="Introduce un numero" required
+                class="form-control">
+                <p class="valid-feedback">Correcto</p>
+                <p class="invalid-feedback">Campo vacio</p>
+            </div>
+            <div class="mb-3"></div>
+                <input type="number" id="ej2Numer" placeholder="Introduce un numero" required
+                    class="form-control">
+                <p class="valid-feedback">Correcto</p>
+                <p class="invalid-feedback">Campo vacio</p>
+            </div>
+            <button type="button" class="btn btn-success" onclick="cualMayor()">Enviar</button>
+        </form>
+        <p id="ej2Mayor"></p>
+
+        <h3>Ejercicio 3: Crea un formulario para que el usuario introduzca su edad
+            y vea un mensaje indicando si es mayor de edad o no</h3>
+
+            <form id="ej3Condicionales" class="was-validated">
+                <div class="mb-3">
+                    <input type="number" id="ej3Numero" placeholder="Introduce edad" required
+                        class="form-control">
+                    <p class="valid-feedback">Correcto</p>
+                    <p class="invalid-feedback">Campo vacio</p>
+                </div>
+                <button type="button" class="btn btn-success" onclick="mayorEdad()">Enviar</button>
+            </form>
+            <p id="ej3Mayor"></p>
+
+        <h3>Ejercicio 4: Crea un formulario para que el usuario introduzca 
+            su nota y vea si esta aprobado o suspenso</h3>
+
+
+            <form id="ej3Condicionales" class="was-validated">
+                <div class="mb-3">
+                    <input type="number" id="ej4Nota" placeholder="Introducir nota" required
+                        class="form-control" step="0.001">
+                    <p class="valid-feedback">Correcto</p>
+                    <p class="invalid-feedback">Campo vacio</p>
+                </div>
+                <button type="button" class="btn btn-success" onclick="nota()">Enviar</button>
+            </form>
+            <p id="ej4Notafinal"></p>
+
+        <h3>Ejercicio 5: Crea un formulario para que el usuario introduzca su nombre 
+            y le diga si es un nombre largo o corto.</h3>
+
+            <form id="ej5Condicionales" class="was-validated">
+                <div class="mb-3">
+                    <input type="text" id="ej5Nombre" placeholder="Introduce nombre" required
+                        class="form-control">
+                    <p class="valid-feedback">Correcto</p>
+                    <p class="invalid-feedback">Campo vacio</p>
+                </div>
+                <button type="button" class="btn btn-success" onclick="nombreLargo()">Enviar</button>
+            </form>
+            <p id="ej5LargoCorto"></p>
+
+            <h3>Ejercicio 6: Crea un formulario para ver la estacion del año segun el mes introducido</h3>
+
+            <form id="ej6Condicionales" class="was-validated">
+                <div class="mb-3">
+                    <select id="ej6Estacion" required>
+                        <option value=""></option>
+                        <option value="enero">Enero</option>
+                        <option value="febrero">Febrero</option>
+                        <option value="marzo">Marzo</option>
+                        <option value="abril">Abril</option>
+                        <option value="mayo">Mayo</option>
+                        <option value="junio">Junio</option>
+                        <option value="julio">Julio</option>
+                        <option value="agosto">Agosto</option>
+                        <option value="septiembre">Septiembre</option>
+                        <option value="octubre">Octubre</option>
+                        <option value="noviembre">Noviembre</option>
+                        <option value="diciembre">Diciembre</option>
+                    </select>
+                    <p class="valid-feedback">Correcto</p>
+                    <p class="invalid-feedback">Campo vacio</p>
+                </div>
+                <button type="button" class="btn btn-success" onclick="estacionDelanyo()">Enviar</button>
+            </form>
+            <p id="ej6Meses"></p>
 
 
     <script src="js/e6-condicionales.js"></script>

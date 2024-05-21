@@ -96,7 +96,7 @@ function mostrarPrecioViaje() {
 
     if (viaje === "paris") {
         precioViaje = 10;
-        if(numeroDias>10){
+        if (numeroDias > 10) {
             descuento = 100;
         }
         else {
@@ -116,9 +116,139 @@ function mostrarPrecioViaje() {
         precioViaje = 0;
     }
 
-    precioTotal = (precioViaje * numeroDias)-descuento;
+    precioTotal = (precioViaje * numeroDias) - descuento;
     mensaje = "El precio del viaje a " + viaje + " es de " + precioTotal + " tiene un descuento de " + descuento;
-    imprimir(mensaje,"ej6resultado");
-    
+    imprimir(mensaje, "ej6resultado");
+
+
+}
+
+//EJERCICIOS//
+
+//EJERCICIO 1:
+
+function numeroMayor() {
+    let numero = parseFloat(document.getElementById("ej1Numero").value);
+    let mensaje = "";
+
+
+    if (numero >= 18) {
+        mensaje = "Es mayor de edad";
+
+    }
+    else {
+        mensaje = "Es menor de edad";
+    }
+    imprimir(mensaje, "ej1Mayor");
+}
+
+//EJERCICIO 2:
+
+function cualMayor() {
+    let numero = parseFloat(document.getElementById("ej2Numero").value);
+    let numero2 = parseFloat(document.getElementById("ej2Numer").value);
+    let mensaje = "";
+
+    if (numero > numero2) {
+        mensaje = "El numero mayor es " + numero;
+
+    }
+    else {
+        mensaje = "El numero mayor es " + numero2;
+    }
+    imprimir(mensaje, "ej2Mayor");
+
+}
+
+//EJERCICIO 3:
+
+function mayorEdad() {
+    let numero = parseFloat(document.getElementById("ej3Numero").value);
+    let mensaje = "";
+
+
+    if (numero >= 18) {
+        mensaje = "Es mayor de edad";
+
+    }
+    else {
+        mensaje = "Es menor de edad";
+    }
+    imprimir(mensaje, "ej3Mayor");
+
+}
+
+//Ejercicio 4:
+
+function nota() {
+    let numero = parseFloat(document.getElementById("ej4Nota").value);
+    let mensaje = "";
+
+
+    if (numero >= 5) {
+        mensaje = "Estás aprobado con una nota de " + numero;
+    }
+
+    else {
+        mensaje = "Estás suspendido con una nota de " + numero;
+
+    }
+
+    imprimir(mensaje, "ej4Notafinal");
+
+}
+
+//Ejercicio 5:
+function nombreLargo() {
+
+    let nombre = document.getElementById("ej5Nombre").value;
+    let mensaje = "";
+    let = nombre.length;
+
+    if (longitudNombre > 10) {
+        mensaje = "El nombre es largo " + nombre;
+
+    }
+    else {
+        mensaje = "El nombre es corto " + nombre;
+    }
+
+
+    imprimir(mensaje, "ej5LargoCorto");
+}
+
+//Ejercicio 6:
+
+function estacionDelanyo() {
+
+    let mes = document.getElementById("ej6Estacion").value;
+    let mensaje = "";
+    let primavera = "marzo,abril,mayo";
+    let verano = "junio,julio,agosto";
+    let otoño = "septiembre,octubre,noviembre";
+    let invierno = "diciembre,enero,febrero";
+
+
+    if (primavera.includes(mes)) {
+        mensaje = "Estamos en primavera ";
+    }
+
+    else if (verano.includes(mes)) {
+        mensaje = "Estamos en varano ";
+    }
+
+    else if (otoño.includes(mes)) {
+        mensaje = "Estamos en otoño";
+    }
+
+    else if (invierno.includes(mes)) {
+        mensaje = "Estamos en invierno ";
+    }
+
+    else {
+        mensaje = "La estacion no es correcta ";
+    }
+
+    imprimir(mensaje,"ej6Meses");
 
 }
