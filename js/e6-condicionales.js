@@ -252,3 +252,54 @@ function estacionDelanyo() {
     imprimir(mensaje,"ej6Meses");
 
 }
+
+//Ejercicio 7:
+
+function cuenta() {
+    let numero1 = parseFloat(document.getElementById("ej7Numero").value);
+    let numero2 = parseFloat(document.getElementById("ej7Numer").value);
+    let mensaje = "";
+
+    if (!isNaN(numero1) && !isNaN(numero2)) {
+        let suma = numero1 + numero2;
+        let resta = numero1 - numero2;
+        let multiplicacion = numero1 * numero2;
+        let division = numero1 / numero2;
+
+        mensaje = "Suma: " + suma + ", Resta: " + resta + ", Multiplicacion: " + multiplicacion + ", Division: " + division;
+    } else {
+        mensaje = "Los campos no pueden estar vacíos";
+    }
+
+    imprimir(mensaje, "ej7Total");
+}
+
+//Ejercicio 8: TENGO QUE PONER LA CANTIDAD PARA QUE LO SUME ESTA MAL
+function calcularPrecioFinal() {
+    let producto = parseFloat(document.getElementById("producto").value);
+    let formaPago = parseFloat(document.getElementById("formaPago").value);
+    let mensaje = "";
+    
+    if (producto === 0 || formaPago === 0) {
+        mensaje = "<Seleccione un producto y una forma de pago.";
+        document.getElementById("precioFinal").innerText = mensaje;
+        return;
+    }
+    
+    let precioFinal;
+    if (formaPago === 0) {
+        precioFinal = producto;
+    } 
+
+    else if (formaPago === 1) {
+        precioFinal = producto;
+    } 
+    else {
+        mensaje = "Seleccione una forma de pago válida.";
+        document.getElementById("precioFinal").innerText = mensaje;
+        return;
+    }
+    
+    document.getElementById("precioFinal").innerText = "El precio final es: " + precioFinal + "€";
+}
+

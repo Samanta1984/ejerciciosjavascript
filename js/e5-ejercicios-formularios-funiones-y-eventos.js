@@ -83,27 +83,29 @@ function ej7Formulario(){
   imprimir(mensaje, "ej7Formulario");
 }
 
-//NO ME FUNCIONA function calcularPromedio(){
-let nota = parseInt(document.getElementById("promedio").value);
-const NOTA1 = 0;
-const NOTA2 = 10;
-const NOTA3 = "";
-let promedio = suma + NOTA1 + NOTA2 + NOTA3 / 3;
-let mensaje = "El promedio de la nota es :" + promedio + "total";
-imprimir(mensaje, "resultadoPromedio");
+//Ejercicio 8:
+  function calcularNotamedia(){
+    let Nota1 = parseInt(document.getElementById("ej8Nota1").value);
+    let Nota2 = parseInt(document.getElementById("ej8Nota2").value);
+    let Nota3 = parseInt(document.getElementById("ej8Nota3").value);
+    let notaMedia = (Nota1 + Nota2 + Nota3)/ 3;
+    let mensaje = "Nota1: " + Nota1 + "; Nota 2: " + Nota2 + "; Nota 3: " + Nota3 + "; Nota media es igual a: " + notaMedia;
+    imprimir(mensaje, "ex8resultado");
 
-//}
+}
 
+//Ejercicio 9:
 function seleccionar(){
-  let cantidadCamiseta = document.getElementById("camiseta").value; 
-  let cantidadZapato = document.getElementById("zapato").value;  
-  let cantidadSombrero = document.getElementById("sombrero").value; 
+  let cantidadCamiseta = parseInt(document.getElementById("camiseta").value); 
+  let cantidadZapato = parseInt(document.getElementById("zapato").value);  
+  let cantidadSombrero = parseInt(document.getElementById("sombrero").value); 
   
 
-  let mensaje = "Has seleccionado los siguientes articulos " + cantidadCamiseta + cantidadZapato + cantidadSombrero + " sumando un total de : ";
+  let mensaje = "Has seleccionado los siguientes articulos " + "camiseta" + cantidadCamiseta + "zapato" + cantidadZapato + "sombrero" +cantidadSombrero + " sumando un total de : ";
   imprimir(mensaje, "eje9FormulariosResultado");
 }
 
+//Ejercicio 10:
 function nombreTipo(){
   let mascota = document.getElementById("mascota").value;
   let gato = document.getElementById("gato").value;

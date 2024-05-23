@@ -292,7 +292,7 @@
                             <form id="ejercio7Formulario" class="was-validated">
                             
                                 <div class="mb-3">
-                                    <input type="text" id="ej7texto" placeholder="Introduce el texto" required
+                                    <input type="text" id="ej7texto" placeholder="Introduzca texto entre 10 y 100 caracteres, es obligatorio " required
                                         minlength="10" maxlength="100" class="form-control">
                                     <p class="valid-feedback">Correcto</p>
                                     <p class="invalid-feedback">Texto incorrecto</p>
@@ -304,19 +304,34 @@
                             <p id="ej7Formulario"></p>
 
                         
-                        <h2>Ejercicio 8:Crea un formulario para calcular la nota media</h2>
-                        <h1>Calculadora de promedio</h1>
-                        <form id="formularioPromedio">
-                            <div class="mb-3">
-                                <p for="notas" class="form-label">Ingrese las 3 notas</p>
-                                <input type="text" class="form-control is-invalid" id="notas" required>
-                                <div class="invalid-feedback">
-                                    Separar notas con coma (entre 0 y 10).
-                                </div>
-                            </div>
-                            <button type="button" class="btn btn-primary" onclick="calcularPromedio()">Calcular
-                                promedio</button>
-                            <div id="resultadoPromedio" class="mt-3"></div>
+                        
+                        <h3>Ejercicio 8: Formulario para Nota Media</h3>
+
+        <div id="ejercio8Formulario" class="was-validated">
+            <div class="mb-3">
+                <input type="number" id="ej8Nota1" placeholder="Introduce nota" required min="0" max="10"
+                    class="form-control" step="0.01">
+                <p class="valid-feedback">correcto</p>
+                <p class="invalid-feedback">El valor es obligatorio y debe ser positivo </p>
+            </div>
+            <div class="mb-3">
+                <input type="number" id="ej8Nota2" placeholder="Introduce nota" required min="0" max="10"
+                    class="form-control" step="0.01"> 
+                <p class="valid-feedback">correcto</p>
+                <p class="invalid-feedback">El valor es obligatorio y debe ser positivo </p>
+            </div>
+            <div class="mb-3">
+                <input type="number" id="ej8Nota3" placeholder="Introduce nota" required min="0" max="10"
+                    class="form-control" step="0.01">
+                <p class="valid-feedback">correcto</p>
+                <p class="invalid-feedback">El valor es obligatorio y debe ser positivo </p>
+            </div>
+
+            <button type="button" class="btn btn-success" onclick="calcularNotamedia()">Nota media</button>
+        </div>
+        <p id="ex8resultado"></p>
+
+
 
                 </div>
                 <h2>Ejercicio 9:Crea un formulario para que el usuario pueda seleccionar una cantidad de camisetas,
