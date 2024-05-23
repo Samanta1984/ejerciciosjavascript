@@ -377,23 +377,29 @@
             <h2>Ejercicio 10:Crea un formulario para que el usuario pueda introducir el nombre de su mascota, 
                 y seleccionar el tipo: perro, gato, tortuga, pajaro</h2>
                 
-                <form>
+                <form class="was-validated">
                  <div class="mb-3">
-                 <p for="texto" class="form-label">Ingresa el nombre de tu mascota:</p>
-                 <input type="text" class="form-control is-invalid" id="notas" required>
+                 <label for="texto" class="form-label">Ingresa el nombre de tu mascota:</label>
+                 <input type="text" class="form-control" id="nombreMascota" required>
                  <div class="invalid-feedback">
-                    (entre 0 y 10 caracteres).
+                    (entr 0 y 10 caracteres)
+                </div>
+                <div class="valid-feedback">
+                    El nombre es valido
                  </div>
+                </div>
+
                 
 
                 <div class="mb-3"></div>
                     <label for="Mascota">Tú mascota es un/una:</label>
-                    <select id="Mascota" class="form-select" style="max-width: 150px;" required>
+                    <select id="mascota" class="form-select" style="max-width: 150px;">
                         <option value=""></option>
+                        <option value="no tengo mascota">No tengo mascota</option>
                         <option value="perro">Perro</option>
                         <option value="gato">Gato</option>
                         <option value="tortuga">Tortuga</option>
-                        <option value="periquito">periquito</option>
+                        <option value="pajaro">Pajaro</option>
                     </select>
 
                 </div>

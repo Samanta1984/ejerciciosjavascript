@@ -203,7 +203,7 @@ function nombreLargo() {
 
     let nombre = document.getElementById("ej5Nombre").value;
     let mensaje = "";
-    let = nombre.length;
+    let longitudNombre = nombre.length;
 
     if (longitudNombre > 10) {
         mensaje = "El nombre es largo " + nombre;

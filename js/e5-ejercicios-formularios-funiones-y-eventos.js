@@ -94,11 +94,11 @@ function ej7Formulario(){
 
 }
 
-//Ejercicio 9:
+//Ejercicio 9: ESTA MAL
 function seleccionar(){
-  let cantidadCamiseta = parseInt(document.getElementById("camiseta").value); 
-  let cantidadZapato = parseInt(document.getElementById("zapato").value);  
-  let cantidadSombrero = parseInt(document.getElementById("sombrero").value); 
+  let cantidadCamiseta = document.getElementById("camiseta").value; 
+  let cantidadZapato = document.getElementById("zapato").value;  
+  let cantidadSombrero = document.getElementById("sombrero").value; 
   
 
   let mensaje = "Has seleccionado los siguientes articulos " + "camiseta" + cantidadCamiseta + "zapato" + cantidadZapato + "sombrero" +cantidadSombrero + " sumando un total de : ";
@@ -108,12 +108,9 @@ function seleccionar(){
 //Ejercicio 10:
 function nombreTipo(){
   let mascota = document.getElementById("mascota").value;
-  let gato = document.getElementById("gato").value;
-  let perro = document.getElementById("perro").value;
-  let periquito = document.getElementById("periquito").value;
-  let tortuga = document.getElementById("tortuga").value;
+  let nombre = document.getElementById("nombreMascota").value;
+
   
-  
-  let mensaje = " Hola te llamas" + mascota + " y eres un/una !" + gato + perro + periquito + tortuga;
+  let mensaje = " Hola te llamas " + nombre + " y eres un " + mascota ;
   imprimir(mensaje, "eje10Resultado");
 }
