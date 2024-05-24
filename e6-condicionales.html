@@ -218,40 +218,110 @@
     </form>
     <p id="ej7Total"></p>
 
-    <h3>Ejercicio 8: Crea un formulario que muestre el precio final segun el producto
+    <h3>Ejercicio 7: Crea un formulario que muestre el precio final segun el producto
         y la forma de pago elegida</h3>
 
-    
-<form id="formulario" class="was-validated">
-    <div class="mb-3">
-        <select id="producto" required>
-            <option value=""></option>
-            <option value="10">Producto 1 - 10€</option>
-            <option value="20">Producto 2 - 20€</option>
-            <option value="30">Producto 3 - 30€</option>
-        </select>
+
+    <form id="formulario" class="was-validated">
+        <div class="mb-3">
+            <select id="producto" required>
+                <option value=""></option>
+                <option value="10">Producto 1 - 10€</option>
+                <option value="20">Producto 2 - 20€</option>
+                <option value="30">Producto 3 - 30€</option>
+            </select>
 
 
-        <select id="cantidad" required>
-            <option value=""></option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-        </select>
+            <select id="cantidad" required>
+                <option value=""></option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+            </select>
 
-        <select id="formaPago" required>
-            <option value=""></option>
-            <option value="0">Efectivo</option>
-            <option value="1">Tarjeta</option>
-        </select>
+            <select id="formaPago" required>
+                <option value=""></option>
+                <option value="0">Efectivo</option>
+                <option value="1">Tarjeta</option>
+            </select>
 
-        <button type="button" class="btn btn-success" onclick="calcularPrecioFinal()">Calcular precio final</button>
-    </div>
-</form>
+            <button type="button" class="btn btn-success" onclick="calcularPrecioFinal()">Calcular precio final</button>
+        </div>
+    </form>
 
-<p id="precioFinal"></p>
+    <p id="precioFinal"></p>
 
-            <script src="js/e6-condicionales.js"></script>
+    <h3>Ejercicio 8: Crea un formulario calcule el precio total de un hotel segun la habitacion
+        y el numero de noches elegidas</h3>
+
+    <form id="ej8Condicionales" class="was-validated">
+        <div class="mb-3">
+            <select id="ej8Habitacion" required>
+                <option value=""></option>
+                <option value="suite">Suite 100 euros</option>
+                <option value="habitacion doble">Habitacion doble 70 euros</option>
+                <option value="habitacion individul">habitacion individual 50 euros</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <input type="number" id="ej8numerodedias" placeholder="Elige el numero de dias" required min="1"
+                class="form-control">
+            <p class="valid-feedback">correcto</p>
+            <p class="invalid-feedback">Debes seleccionar al menos un dia. </p>
+        </div>
+        <button type="button" class="btn btn-success" onclick="mostrarPrecioHabitacion()">Ver Precio</button>
+    </form>
+    <p id="ej8resultado"></p>
+
+    <h3>Ejercicio 9: Crea un formulario que calcule el precio total del alquiler de un coche.</h3>
+       
+    <form id="ej9Condicionales" class="was-validated">
+            <div class="mb-3">
+                <label for="ej9Coche">Selecciona un coche:</label>
+                <select id="ej9Coche" required class="form-control">
+                    <option value="">Selecciona un coche</option>
+                    <option value="deluxe">Coche Deluxe - 100 euros</option>
+                    <option value="standard">Coche Standard - 70 euros</option>
+                    <option value="basic">Coche Basic - 50 euros</option>
+                </select>
+                <div class="valid-feedback">Correcto</div>
+                <div class="invalid-feedback">Por favor, selecciona un coche.</div>
+            </div>
+
+            <div class="mb-3">
+                <label for="ej9Seguro">Selecciona un seguro:</label>
+                <select id="ej9Seguro" required class="form-control">
+                    <option value="">Selecciona un seguro</option>
+                    <option value="todo riesgo">Seguro todo riesgo - 20 euros</option>
+                    <option value="basico">Seguro basico - 5 euros</option>
+                </select>
+                <div class="valid-feedback">Correcto</div>
+                <div class="invalid-feedback">Por favor, selecciona un seguro.</div>
+            </div>
+
+            <div class="mb-3">
+                <label for="ej9numero">Año de nacimiento:</label>
+                <input type="number" id="ej9numero" placeholder="Introducir año de nacimiento" required class="form-control">
+                <div class="valid-feedback">Correcto</div>
+                <div class="invalid-feedback">El campo año de nacimiento es obligatorio.</div>
+            </div>
+
+            <div class="mb-3">
+                <label for="ej9numerodedias">NUmero de dias:</label>
+                <input type="number" id="ej9numerodedias" placeholder="Introducir numero de dias" required min="1" class="form-control">
+                <div class="valid-feedback">Correcto</div>
+                <div class="invalid-feedback">Debes seleccionar al menos un dia.</div>
+            </div>
+
+            <button type="button" class="btn btn-success" onclick="mostrarPrecioCoche()">Ver Precio</button>
+        </form>
+
+        <p id="ej9resultado"></p>
+
+
+        </div>
+
+        <script src="js/e6-condicionales.js"></script>
 </body>
 
 </html>

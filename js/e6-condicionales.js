@@ -274,7 +274,7 @@ function cuenta() {
     imprimir(mensaje, "ej7Total");
 }
 
-//Ejercicio 8: TENGO QUE PONER LA CANTIDAD PARA QUE LO SUME ESTA MAL
+//Ejercicio 7: TENGO QUE PONER LA CANTIDAD PARA QUE LO SUME ESTA MAL
 function calcularPrecioFinal() {
     let producto = parseFloat(document.getElementById("producto").value);
     let formaPago = parseFloat(document.getElementById("formaPago").value);
@@ -303,3 +303,72 @@ function calcularPrecioFinal() {
     document.getElementById("precioFinal").innerText = "El precio final es: " + precioFinal + "€";
 }
 
+//Ejercicio 8: ESTA MAL HABITACION INDIVIDUAL NO SALE PRECIO
+
+function mostrarPrecioHabitacion() {
+    let habitacion = document.getElementById("ej8Habitacion").value;
+    let numeroDias = parseInt(document.getElementById("ej8numerodedias").value);
+    let precioHabitacion;
+    let precioTotal;
+    let mensaje = "";
+    let descuento = 0;
+
+    if (numeroDias <= 0) {
+        mensaje = "El numero de noches debe ser mayor a 0";
+        document.getElementById("ej8resultado").innerText = mensaje;
+        return;
+    }
+
+    if (habitacion === "suite") {
+        precioHabitacion = 100;
+    } else if (habitacion === "habitacion doble") {
+        precioHabitacion = 70;
+    } else if (habitacion === "habitacion individual") {
+        precioHabitacion = 50;
+    }
+     else {
+        precioHabitacion = 0;
+        
+    }
+
+    if (numeroDias > 4) {
+        descuento = 0.2; 
+    }
+
+    precioTotal = precioHabitacion * numeroDias;
+    let precioConDescuento = precioTotal * (1 - descuento);
+    mensaje = "El precio de la " + habitacion + " por numero de dias " + numeroDias + " y de noches es de " + precioConDescuento + " con un descuento aplicado : " + descuento + " % ";
+
+    document.getElementById("ej8resultado").innerText = mensaje;
+}
+
+
+
+//Ejercicio 9:
+
+function mostrarPrecioCoche() {
+    let coche = document.getElementById("ej9Coche").value;
+    let seguro = document.getElementById("ej9Seguro").value;
+    let numeroDias = parseInt(document.getElementById("ej9numerodedias").value);
+    let precioCoche;
+    let precioSeguro;
+    let mensaje = "";
+
+    if (numeroDias <= 0) {
+        mensaje = "El numero de dias debe ser mayor a 0";
+        document.getElementById("ej9resultado").innerText = mensaje;
+        return;
+    }
+
+    if (habitacion === "suite") {
+        precioHabitacion = 100;
+    } else if (habitacion === "habitacion doble") {
+        precioHabitacion = 70;
+    } else if (habitacion === "habitacion individual") {
+        precioHabitacion = 50;
+    }
+     else {
+        precioHabitacion = 0;
+        
+    }
+}
