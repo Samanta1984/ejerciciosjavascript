@@ -254,27 +254,43 @@ function estacionDelanyo() {
 }
 
 //Ejercicio 7:
-
-function cuenta() {
-    let numero1 = parseFloat(document.getElementById("ej7Numero").value);
-    let numero2 = parseFloat(document.getElementById("ej7Numer").value);
+function calculadoraNumeros() {
+    let numero1 = parseFloat(document.getElementById("e6calculadora").value);
+    let numero2 = parseFloat(document.getElementById("e6calculadora2").value);
+    let operacion = document.getElementById("e6operacion").value;
+    let resultado = 0;
     let mensaje = "";
 
-    if (!isNaN(numero1) && !isNaN(numero2)) {
-        let suma = numero1 + numero2;
-        let resta = numero1 - numero2;
-        let multiplicacion = numero1 * numero2;
-        let division = numero1 / numero2;
-
-        mensaje = "Suma: " + suma + ", Resta: " + resta + ", Multiplicacion: " + multiplicacion + ", Division: " + division;
-    } else {
-        mensaje = "Los campos no pueden estar vacíos";
+    if (operacion === "sumar") {
+        resultado = numero1 + numero2;
+        mensaje = "La suma de " + numero1 + " mas " + numero2 + " es igual a: " + resultado;
+    }
+    else if (operacion === "restar") {
+        resultado = numero1 - numero2;
+        mensaje = "La resta de " + numero1 + " menos " + numero2 + " es igual a: " + resultado;
+    }
+    else if (operacion === "multiplicar") {
+        resultado = numero1 * numero2;
+        mensaje = "La multiplicación de " + numero1 + " por " + numero2 + " es igual a: " + resultado;
+    }
+    else if (operacion === "dividir") {
+        if (numero2 !== 0) {
+            resultado = numero1 / numero2;
+            mensaje = "La división de " + numero1 + " entre " + numero2 + " es igual a: " + resultado;
+        }
+        else {
+            mensaje = "No se puede dividir entre 0";
+        }
+    }
+    else {
+        mensaje = "Operacion no permitida";
     }
 
-    imprimir(mensaje, "ej7Total");
+
+    imprimir(mensaje, "e6calculadoraresultado");
 }
 
-//Ejercicio 7: TENGO QUE PONER LA CANTIDAD PARA QUE LO SUME ESTA MAL
+//Ejercicio 8: TENGO QUE PONER LA CANTIDAD PARA QUE LO SUME ESTA MAL
 function calcularPrecioFinal() {
     let producto = parseFloat(document.getElementById("producto").value);
     let formaPago = parseFloat(document.getElementById("formaPago").value);
@@ -305,44 +321,34 @@ function calcularPrecioFinal() {
 
 //Ejercicio 8: ESTA MAL HABITACION INDIVIDUAL NO SALE PRECIO
 
-function mostrarPrecioHabitacion() {
-    let habitacion = document.getElementById("ej8Habitacion").value;
-    let numeroDias = parseInt(document.getElementById("ej8numerodedias").value);
-    let precioHabitacion;
-    let precioTotal;
+function CuantasNoches() {
+    let habitacion = document.getElementById("ejer8habitacion").value;
+    let numeroNoches = parseInt(document.getElementById("ejer8cantidadNoches").value);
+    let precioPorNoche = 0;
+    let precioFinal = 0;
     let mensaje = "";
-    let descuento = 0;
-
-    if (numeroDias <= 0) {
-        mensaje = "El numero de noches debe ser mayor a 0";
-        document.getElementById("ej8resultado").innerText = mensaje;
-        return;
-    }
 
     if (habitacion === "suite") {
-        precioHabitacion = 100;
-    } else if (habitacion === "habitacion doble") {
-        precioHabitacion = 70;
-    } else if (habitacion === "habitacion individual") {
-        precioHabitacion = 50;
+        precioPorNoche = 100;
     }
-     else {
-        precioHabitacion = 0;
-        
+    else if (habitacion === "doble") {
+        precioPorNoche = 70;
+    }
+    else if (habitacion === "individual") {
+        precioPorNoche = 50;
     }
 
-    if (numeroDias > 4) {
-        descuento = 0.2; 
+    precioFinal = precioPorNoche * numeroNoches;
+    if (numeroNoches > 5) {   
+        let descuento = (precioFinal * 20)/100; // Aplicando el 20% de descuento
+        precioFinal = precioFinal - descuento;
     }
 
-    precioTotal = precioHabitacion * numeroDias;
-    let precioConDescuento = precioTotal * (1 - descuento);
-    mensaje = "El precio de la " + habitacion + " por numero de dias " + numeroDias + " y de noches es de " + precioConDescuento + " con un descuento aplicado : " + descuento + " % ";
+    mensaje = "El precio total es de: " + precioFinal + " € ";
 
-    document.getElementById("ej8resultado").innerText = mensaje;
+
+    imprimir(mensaje, "ejer8resultadonoches");
 }
-
-
 
 //Ejercicio 9:
 
