@@ -32,13 +32,15 @@
                 <option value="ciudadesDondeHaVivido">Ciudades donde ha vivido</option>
             </select>
         </div>
-        <button type="button" class="btn btn-success" onclick="mostrarPropiedadMascota()">Mostrar Info seleccionada de la mascota</button>
+        <button type="button" class="btn btn-success" onclick="mostrarPropiedadMascota()">Mostrar Info seleccionada de
+            la mascota</button>
         <p id="e2objetos"></p>
 
         <h3>Ejemplo 3: Cambiar propiedades de un objeto. Cambiar nombre a la mascota</h3>
         <form id="ejemplo3objetos" class="was-validated">
             <div class="mb-3">
-                <input type="text" id="e3nombremascota" placeholder="Introduce el nuevo nombre de la mascota" required class="form-control">
+                <input type="text" id="e3nombremascota" placeholder="Introduce el nuevo nombre de la mascota" required
+                    class="form-control">
                 <p class="valid-feedback">correcto</p>
                 <p class="invalid-feedback">El valor nombre es obligatorio</p>
             </div>
@@ -77,10 +79,87 @@
         <p id="e5objetos"></p>
 
     </div>
+    <br>
+    <h3>Ejercicio 1: Crea un nuevo objeto, llamado viaje, que contenga las siguientes propiedades: destino, precio,
+        duracion en dias y lista de ciudades a visitar.
+        Agrega un boton a tu pagina, llamado mostrar info de viaje,
+        que muestre toda la informacion del viaje</h3>
+    <div class="mb-3">
+        <form id="ejemplo5objetos" class="was-validated">
 
+            <button type="button" class="btn btn-success" onclick="mostrarInfoViaje()">Mostrar Info Viaje</button>
+        </form>
+        <p id="ej1objetos"></p>
+    </div>
+
+    <h3>Ejercicio 2: Agrega a un formulario para modificar el viaje anterior.
+        Para ello agrega un select donde el usuario pueda elegir la propiedad a modificar (destino, precio, duracion,
+        lista de ciudades)
+        y un campo donde pueda introducir el nuevo valor. Agrega un boton modificar viaje, que actualice el objeto
+        anterior con la nueva informacion
+        y lo muestre por pantalla</h3>
+    <div class="mb-3">
+        <form id="modificarViajeForm" class="was-validated">
+            <select id="propiedad" class="form-select" required>
+                <option value="" disabled selected>Elige una propiedad</option>
+                <option value="destino">Destino</option>
+                <option value="precio">Precio</option>
+                <option value="duracion">Duracion</option>
+                <option value="ciudades">Lista de ciudades</option>
+            </select>
+            <br>
+            <input type="text" id="nuevoValor" class="form-control" placeholder="Introduce el nuevo valor" required>
+            <br>
+            <button type="button" class="btn btn-success" onclick="modificarViaje()">Modificar Viaje</button>
+        </form>
+        <p id="resultadoModificacion"></p>
+    </div>
+
+    <h3>Ejercicio 3: Agrega un formulario en el que el usuario pueda introducir una descripcion del viaje.
+        Agrega un boton que al pulsarlo agrege la descripcion introducida al objeto viaje y
+        muestre la informacion del viaje actualizada.</h3>
+
+    <div class="mb-3">
+        <form id="agregarDescripcionForm" class="was-validated">
+            <input type="text" id="descripcion" class="form-control" placeholder="Introduce la descripcion del viaje"
+                required>
+            <br>
+            <button type="button" class="btn btn-success" onclick="agregarDescripcion()">Agregar Descripcion</button>
+        </form>
+        <p id="resultadoDescripcion"></p>
+    </div>
+
+    <h3>Ejercicio 4: Agrega un formulario para agregar viajeros del viaje, 
+        puede agregar todos los que quiera a una lista. Para ello crea un formulario en el que introduzca el nombre del viajero, 
+        seleccione el tipo (adulto o niño), y seleccione los descuentos: estudiante, jubilado o ninguno.
+        Cuando el usuario pulse el boton agregar, se mostrará la lista con toda la información de los viajeros agregados. </h3>
+
+        <div class="mb-3">
+            <form id="agregarViajeroForm">
+                <input type="text" id="nombreViajero" class="form-control" placeholder="Nombre" required>
+                <br>
+                <select id="tipoViajero" class="form-select" required>
+                    <option value="" disabled selected>Seleccionar</option>
+                    <option value=""></option>
+                    <option value="adulto">Adulto</option>
+                    <option value="niño">Niño</option>
+                </select>
+                <br>
+                <select id="descuentoViajero" class="form-select" required>
+                    <option value="" disabled selected>Seleccionar</option>
+                    <option value=""></option>
+                    <option value="estudiante">Estudiante</option>
+                    <option value="jubilado">Jubilado</option>
+                </select>
+                <br>
+                <button type="button" class="btn btn-success" onclick="agregarViajero()">Agregar Viajero</button>
+            </form>
+            <p id="listaViajeros"></p>
+        </div>
 
 
     <script src="js/e9-objetos.js"></script>
+    <script src="js/e9-ejercicios-objetos.js"></script>
 </body>
 
 </html>
