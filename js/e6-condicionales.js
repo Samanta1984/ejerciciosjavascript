@@ -249,7 +249,7 @@ function estacionDelanyo() {
         mensaje = "La estacion no es correcta ";
     }
 
-    imprimir(mensaje,"ej6Meses");
+    imprimir(mensaje, "ej6Meses");
 
 }
 
@@ -295,27 +295,27 @@ function calcularPrecioFinal() {
     let producto = parseFloat(document.getElementById("producto").value);
     let formaPago = parseFloat(document.getElementById("formaPago").value);
     let mensaje = "";
-    
+
     if (producto === 0 || formaPago === 0) {
         mensaje = "<Seleccione un producto y una forma de pago.";
         document.getElementById("precioFinal").innerText = mensaje;
         return;
     }
-    
+
     let precioFinal;
     if (formaPago === 0) {
         precioFinal = producto;
-    } 
+    }
 
     else if (formaPago === 1) {
         precioFinal = producto;
-    } 
+    }
     else {
         mensaje = "Seleccione una forma de pago válida.";
         document.getElementById("precioFinal").innerText = mensaje;
         return;
     }
-    
+
     document.getElementById("precioFinal").innerText = "El precio final es: " + precioFinal + "€";
 }
 
@@ -339,8 +339,8 @@ function CuantasNoches() {
     }
 
     precioFinal = precioPorNoche * numeroNoches;
-    if (numeroNoches > 5) {   
-        let descuento = (precioFinal * 20)/100; // Aplicando el 20% de descuento
+    if (numeroNoches > 5) {
+        let descuento = (precioFinal * 20) / 100; // Aplicando el 20% de descuento
         precioFinal = precioFinal - descuento;
     }
 
@@ -350,31 +350,120 @@ function CuantasNoches() {
     imprimir(mensaje, "ejer8resultadonoches");
 }
 
-//Ejercicio 9:
+//Ejercicio 9: SIGUE SIN FUNCIONAR
+
+function precioCoche() {
+    let coche = document.getElementById("ej9Coche").value;
+    let precioCoche = 0;
+    //define el precio del coche segun la opcion elegida
+    if (coche === "deluxe") {
+        precioCoche = 100;
+    } else if (coche === "standard") {
+        precioCoche = 70;
+    } else if (coche === "basic") {
+        precioCoche = 50;
+    }
+    else {
+        precioCoche = 0;
+    }
+    return precioCoche;
+}
+
+function precioSeguro() {
+    let seguro = document.getElementById("ej9Seguro").value;
+    let precioSeguro = 0;
+    if (seguro === "todo riesgo") {
+        precioSeguro = 20;
+    }
+    else {
+        precioSeguro = 5;
+    }
+
+    return precioSeguro;
+}
+
+
 
 function mostrarPrecioCoche() {
-    let coche = document.getElementById("ej9Coche").value;
-    let seguro = document.getElementById("ej9Seguro").value;
     let numeroDias = parseInt(document.getElementById("ej9numerodedias").value);
-    let precioCoche;
-    let precioSeguro;
+    let anyoNacimiento = parseInt(document.getElementById("ej9numero").value);
+    let anyoActual = 2024;
+    //1. Calculamos la edad actual que es igual al anyo actual menos el de nacimeinto
+    let edad = anyoActual - anyoNacimiento;
+    let precioCoche = 0;
+    let precioSeguro = 0;
+    let precioTotal = 0;
     let mensaje = "";
 
-    if (numeroDias <= 0) {
-        mensaje = "El numero de dias debe ser mayor a 0";
-        document.getElementById("ej9resultado").innerText = mensaje;
-        return;
+
+    if (edad < 25) {
+        mensaje = "No es mayor de 25, no puede alquilar un coche";
+    }
+    else {
+        //1. obtenemos el precio del coche segun la opcion elegida
+        precioCoche = precioCoche();
+        //define el precio del seguro segun la opcion elegida
+        precioSeguro = precioSeguro();
+        //calcula el precio total
+        precioTotal = (numeroDias * precioCoche) + (numeroDias * precioSeguro);
+
+        //aplica un descuento si es mayor a 7 dias la estancia
+        if (numeroDias > 7) {
+            let descuento = precioTotal * 10 / 100;
+            precioTotal = precioTotal - descuento;
+        }
+        //muestra un mensaje con el precio total, y si es basico ademas muestra un mensaje con el deposito a dejar.
+        if (seguro === "basico") {
+            let depositoSeguroBasico = 500;
+            mensaje = "El precio total es " + precioTotal + ", ha elegido seguro basico, debe dejar un deposito de " + depositoSeguroBasico;
+        }
+        else {
+            mensaje = "El precio total es de " + precioTotal + ", no es necesario deposito";
+        }
+
     }
 
-    if (habitacion === "suite") {
-        precioHabitacion = 100;
-    } else if (habitacion === "habitacion doble") {
-        precioHabitacion = 70;
-    } else if (habitacion === "habitacion individual") {
-        precioHabitacion = 50;
+    imprimir(mensaje, "ej9resultado");
+
+}
+
+//Ejercico 10
+
+
+let intentosRestantes = 3;
+
+
+function mostrarNumero() {
+    let numeroIntroducido = parseInt(document.getElementById('ej10numero').value);
+    let numero = parseInt(document.getElementById('ej10numero').value);
+    let numeroGanador = 5;
+    let mensaje = "";
+
+    if (numeroIntroducido === "") {
+        mensaje = "Por favor, introduce un número del 1 al 10.";
     }
-     else {
-        precioHabitacion = 0;
-        
+
+    if (numero < 1 || numero > 10) {
+        mensaje = "El número debe estar entre 1 y 10";
     }
+
+    if (intentosRestantes === 0) {
+        mensaje = "Lo siento no puedes jugar mas, te quedaste sin intentos ";
+
+    }
+    else {
+        if (numero === numeroGanador) {
+            mensaje = "Felicidades, has ganado ";
+
+        }
+        else {
+
+            intentosRestantes = intentosRestantes - 1;
+            mensaje = "Has perdido. Vuelve a intentarlo. Te quedan " + intentosRestantes + " intentos"
+        }
+
+
+    }
+    imprimir(mensaje, "ej10resultado");
+
 }
