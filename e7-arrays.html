@@ -105,7 +105,8 @@
         <h3>Ejercicio 2: Muestra el nombre del alumno de la posición que elijas.</h3>
         <form id="ej2formulario" class="was-validated">
             <div class="mb-3">
-                <input type="number" id="ej2posicion" placeholder="Introduce la posicion" min="0" required class="form-control">
+                <input type="number" id="ej2posicion" placeholder="Introduce la posicion" min="0" required
+                    class="form-control">
                 <p class="valid-feedback">Correcto</p>
                 <p class="invalid-feedback">El campo es obligatorio</p>
             </div>
@@ -113,72 +114,71 @@
         </form>
         <div id="resultado"></div>
 
-            <h3>Ejercicio 3: Agrega un boton mostrar alumnos ordenados, que muestre los alumnos ordenados por nombre.
+        <h3>Ejercicio 3: Agrega un boton mostrar alumnos ordenados, que muestre los alumnos ordenados por nombre.
+        </h3>
+
+        <button type="button" class="btn btn-success" onclick="alumnosOrdenados()">Mostrar alumnos
+            ordenados</button>
+        <p id="ej3ordenados"></p>
+
+        <h3>Ejercicio 4: Agrega una nueva opcion para agregar un nuevo alumno. Para ello:
+            1.Agrega un campo para introducir el nombre del alumno. No puede estar vacio y debe tener maximo 30
+            caracteres.
+            2.Agrega un boton agregar, que al pulsarlo agrege al nuevo alumno a la lista y muestre la lista de
+            alumnos
+            actualizada.
+        </h3>
+
+        <form id="ej4nombreLista" class="was-validated">
+            <div class="mb-3">
+                <input type="texto" id="ej4lista" placeholder="No puede estar vacio y debe tener maximo 30 caracteres"
+                    required class="form-control">
+                <p class="valid-feedback">Correcto</p>
+                <p class="invalid-feedback">El campo es obligatorio</p>
+            </div>
+
+            <button type="button" class="btn btn-success" onclick="agregarNombre()">Agregar</button>
+
+            <h3>Ejercicio 5: Agrega una opcion para eliminar un alumno de una posicion elegida.
+                1.Agrega un campo para introducir la posicion del alumno a eliminar. Debe ser un numero entre 1 y
+                500.
+                2.Agrega un boton eliminar, que al pulsarlo, elimine el alumno de la posicion introducida y muestre
+                la
+                lista de alumnos actualizada.
+                Agrega una comprobacion para mostrar un mensaje de error si la posicion introducida es mayor a la
+                longitud total de la lista.
             </h3>
 
-            <button type="button" class="btn btn-success" onclick="alumnosOrdenados()">Mostrar alumnos
-                ordenados</button>
-            <p id="ej3ordenados"></p>
-
-            <h3>Ejercicio 4: Agrega una nueva opcion para agregar un nuevo alumno. Para ello:
-                1.Agrega un campo para introducir el nombre del alumno. No puede estar vacio y debe tener maximo 30
-                caracteres.
-                2.Agrega un boton agregar, que al pulsarlo agrege al nuevo alumno a la lista y muestre la lista de
-                alumnos
-                actualizada.
-            </h3>
-
-            <form id="ej4nombreLista" class="was-validated">
+            <form id="ej5formulario" class="was-validated">
                 <div class="mb-3">
-                    <input type="texto" id="ej4lista"
-                        placeholder="No puede estar vacio y debe tener maximo 30 caracteres" required
+                    <input type="number" id="ej5posicion"
+                        placeholder="Introduce la posicion del nombre que quieres eliminar" required min="1"
                         class="form-control">
                     <p class="valid-feedback">Correcto</p>
-                    <p class="invalid-feedback">El campo es obligatorio</p>
+                    <p class="invalid-feedback">Debe ser un numero entre 1 y 500</p>
                 </div>
+                <button type="button" class="btn btn-success" onclick="eliminarPosicion()">Eliminar</button>
 
-                <button type="button" class="btn btn-success" onclick="agregarNombre()">Agregar</button>
-
-                <h3>Ejercicio 5: Agrega una opcion para eliminar un alumno de una posicion elegida.
-                    1.Agrega un campo para introducir la posicion del alumno a eliminar. Debe ser un numero entre 1 y
-                    500.
-                    2.Agrega un boton eliminar, que al pulsarlo, elimine el alumno de la posicion introducida y muestre
-                    la
-                    lista de alumnos actualizada.
-                    Agrega una comprobacion para mostrar un mensaje de error si la posicion introducida es mayor a la
-                    longitud total de la lista.
+                <h3>Ejercicio 6: Agrega una opcion para buscar un alumno. Para ello:
+                    1.Agrega un campo para introducir el nombre del alumno a buscar.
+                    2.Agrega un boton buscar, que al pulsarlo muestre un mensaje con todos los alumnos que contengan
+                    el
+                    nombre introducido,
+                    sin distinguir entre mayusculas y minusculas.
                 </h3>
 
-                <form id="ej5formulario" class="was-validated">
+                <form id="ej6nombreLista" class="was-validated">
                     <div class="mb-3">
-                        <input type="number" id="ej5posicion"
-                            placeholder="Introduce la posicion del nombre que quieres eliminar" required min="1"
+                        <input type="texto" id="ej6agregar"
+                            placeholder="No puede estar vacio y debe tener maximo 30 caracteres" required
                             class="form-control">
                         <p class="valid-feedback">Correcto</p>
-                        <p class="invalid-feedback">Debe ser un numero entre 1 y 500</p>
+                        <p class="invalid-feedback">El campo es obligatorio</p>
                     </div>
-                    <button type="button" class="btn btn-success" onclick="eliminarPosicion()">Eliminar</button>
 
-                    <h3>Ejercicio 6: Agrega una opcion para buscar un alumno. Para ello:
-                        1.Agrega un campo para introducir el nombre del alumno a buscar.
-                        2.Agrega un boton buscar, que al pulsarlo muestre un mensaje con todos los alumnos que contengan
-                        el
-                        nombre introducido,
-                        sin distinguir entre mayusculas y minusculas.
-                    </h3>
-
-                    <form id="ej6nombreLista" class="was-validated">
-                        <div class="mb-3">
-                            <input type="texto" id="ej6agregar"
-                                placeholder="No puede estar vacio y debe tener maximo 30 caracteres" required
-                                class="form-control">
-                            <p class="valid-feedback">Correcto</p>
-                            <p class="invalid-feedback">El campo es obligatorio</p>
-                        </div>
-
-                        <button type="button" class="btn btn-success" onclick="ej6buscarNombre()">Buscar</button>
-                    </form>
-                    <div id="resultado1"></div>
+                    <button type="button" class="btn btn-success" onclick="ej6buscarNombre()">Buscar</button>
+                </form>
+                <div id="resultado1"></div>
 
     </div>
 

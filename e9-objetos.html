@@ -129,37 +129,63 @@
         <p id="resultadoDescripcion"></p>
     </div>
 
-    <h3>Ejercicio 4: Agrega un formulario para agregar viajeros del viaje, 
-        puede agregar todos los que quiera a una lista. Para ello crea un formulario en el que introduzca el nombre del viajero, 
+    <h3>Ejercicio 4: Agrega un formulario para agregar viajeros del viaje,
+        puede agregar todos los que quiera a una lista. Para ello crea un formulario en el que introduzca el nombre del
+        viajero,
         seleccione el tipo (adulto o niño), y seleccione los descuentos: estudiante, jubilado o ninguno.
-        Cuando el usuario pulse el boton agregar, se mostrará la lista con toda la información de los viajeros agregados. </h3>
+        Cuando el usuario pulse el boton agregar, se mostrará la lista con toda la información de los viajeros
+        agregados. </h3>
+
+    <div class="mb-3">
+        <form id="agregarViajeroForm">
+            <input type="text" id="nombreViajero" class="form-control" placeholder="Nombre" required>
+            <br>
+            <select id="tipoViajero" class="form-select" required>
+                <option value="" disabled selected>Seleccionar</option>
+                <option value=""></option>
+                <option value="adulto">Adulto</option>
+                <option value="niño">Niño</option>
+            </select>
+            <br>
+            <select id="descuentoViajero" class="form-select" required>
+                <option value="" disabled selected>Seleccionar</option>
+                <option value=""></option>
+                <option value="estudiante">Estudiante</option>
+                <option value="jubilado">Jubilado</option>
+            </select>
+            <br>
+            <button type="button" class="btn btn-success" onclick="agregarViajero()">Agregar Viajero</button>
+        </form>
+        <p id="listaViajeros"></p>
+    </div>
+
+
+    <h3>Ejercicio 5: Agrega al formulario un boton para mostrar el precio que debe pagar cada viajero por el viaje.
+        El precio del viaje para los niños es un 25% más barato.
+        Para estudiante se aplica un descuento del 5%, para jubilados un descuento del 10%.
+        El precio a pagar del viaje se debe agregar como una propiedad mas de cada viajero.</h3>
+    <div class="mb-3">
+        <form id="precioPagar">
+
+            <button type="button" class="btn btn-success" onclick="calcularPrecio()">Calcular Precio</button>
+        </form>
+
+        <div id="resultadoPrecio"></div>
+
+    <h3>Ejercicio 6: Agrega un boton al formulario para mostrar el precio total del viaje. 
+        Este precio será la suma del precio pagado por cada viajero.</h3>
 
         <div class="mb-3">
-            <form id="agregarViajeroForm">
-                <input type="text" id="nombreViajero" class="form-control" placeholder="Nombre" required>
-                <br>
-                <select id="tipoViajero" class="form-select" required>
-                    <option value="" disabled selected>Seleccionar</option>
-                    <option value=""></option>
-                    <option value="adulto">Adulto</option>
-                    <option value="niño">Niño</option>
-                </select>
-                <br>
-                <select id="descuentoViajero" class="form-select" required>
-                    <option value="" disabled selected>Seleccionar</option>
-                    <option value=""></option>
-                    <option value="estudiante">Estudiante</option>
-                    <option value="jubilado">Jubilado</option>
-                </select>
-                <br>
-                <button type="button" class="btn btn-success" onclick="agregarViajero()">Agregar Viajero</button>
+            <form id="precioTotalpagar">
+    
+                <button type="button" class="btn btn-success" onclick="calcularPreciototal()">Precio total del viaje</button>
             </form>
-            <p id="listaViajeros"></p>
-        </div>
+    
+            <div id="resultadoPreciototal"></div>
 
 
-    <script src="js/e9-objetos.js"></script>
-    <script src="js/e9-ejercicios-objetos.js"></script>
+        <script src="js/e9-objetos.js"></script>
+        <script src="js/e9-ejercicios-objetos.js"></script>
 </body>
 
 </html>

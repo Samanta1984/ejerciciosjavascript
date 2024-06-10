@@ -43,15 +43,16 @@ function agregarPropietario() {
     mascota["propietario"] = nombrePropietario;
     mostrarMascota();
 }
-
+// bali, 10, gato (0), miau, 20, gato(1), jackie, 50, perro (2)
 //imprimir un array de objetos
 function imprimirListaMascotas () {
     let mensaje = "";
     for(i=0; i<mascotas.length; i++) {
+        let mascota = mascotas [i];
         mensaje+= "Mascota numero" + i;
-        mensaje+= " Nombre:" + mascotas[i].nombre;
-        mensaje+= "Edad: " + mascotas[i].edad;
-        mensaje+= "Tipo: " + mascotas[i].tipo;
+        mensaje+= " Nombre:" + mascota["nombre"];
+        mensaje+= "Edad: " + mascota["edad"];
+        mensaje+= "Tipo: " + mascota["tipo"];
     }
     imprimir(mensaje,"e5objetos");
 }

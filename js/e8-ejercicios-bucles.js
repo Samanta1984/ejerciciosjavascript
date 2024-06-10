@@ -55,11 +55,8 @@ function eleccionPalabra() {
 
 function mostrarPares() {
     let num = parseInt(document.getElementById('numeroPar').value);
-    if (isNaN(num)) {
-        alert('Por favor, introduce un numero.');
-        return;
-    }
     let resultado = '';
+
     for (let i = 0; i <= num; i++) {
         if (i % 2 === 0) {
             resultado += i + ' ';
